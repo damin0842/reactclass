@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@import "./assets/css/fonts.css";
+
+@import "./assets/css/reset.css";
+
+@import "./assets/css/common.css";
+
+@import "./assets/css/header.css";
+@import "./assets/css/slider.css";
+@import "./assets/css/swiper.css";
+
+@import "./assets/css/image.css";
+
+@import "./assets/css/imgtext.css";
+
+
+@import "./assets/css/card.css";
+
+@import "./assets/css/banner.css";
+@import "./assets/css/text.css";
+
+
+@import "./assets/css/footer.css";
