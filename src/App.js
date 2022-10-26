@@ -16,7 +16,7 @@ function App() {
     <div>
       <Header fonts="nexon" />
       <Main>
-        <Slider />
+        <Slider attr={["nexon", "section", "gray", "container"]} />
         <Image attr={["section", "nexon", "container"]} />
         <ImageText attr={["nexon", "section", "gray", "container"]} />
         <Card attr={["section", "nexon", "container"]} />
