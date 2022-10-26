@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-function Slider(attr) {
+function Slider({ attr }) {
   return (
     <section id="sliderType" className={`slider__wrap ${attr[0]}`}>
       <div className="slider__inner">
