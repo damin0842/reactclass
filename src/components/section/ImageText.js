@@ -1,5 +1,31 @@
 import React from "react";
 
+const ImgTxtInfo = (info) => {
+  return (
+    <div className={`imgText__img ${info.class}`}>
+      <a href="/" className={info.btnClass}>
+        {info.site}
+      </a>
+    </div>
+  );
+};
+const imgTxtText = [
+  {
+    class: "img1",
+    site: "레퍼런스 사이트",
+    btnClass: "basic",
+  },
+  {
+    class: "img2",
+    site: "튜토리얼 사이트",
+    btnClass: "blue",
+  },
+];
+const imgTxtTitle = {
+  type: "이미지 텍스트 유형01",
+  title: "유용한 사이트 살펴보기",
+  desc: " 웹디자이너, 웹 퍼블리셔, 프론트엔드 개발자를 위한 유용한 사이트입니다.",
+};
 function ImageText({ attr }) {
   return (
     <section
@@ -9,12 +35,9 @@ function ImageText({ attr }) {
       <h2 className="blind">유용한 사이트 살펴보기</h2>
       <div className={`imgText__inner ${attr[3]}`}>
         <div className="imgText__txt">
-          <span>이미지 텍스트 유형01</span>
-          <h3>유용한 사이트 살펴보기</h3>
-          <p>
-            웹디자이너, 웹 퍼블리셔, 프론트엔드 개발자를 위한 유용한
-            사이트입니다.
-          </p>
+          <span>{imgTxtTitle.type}</span>
+          <h3>{imgTxtTitle.title}</h3>
+          <p>{imgTxtTitle.desc}</p>
           <ul>
             <li>
               <a href="/">튜토리얼 사이트</a>
@@ -36,14 +59,15 @@ function ImageText({ attr }) {
             </li>
           </ul>
         </div>
-        <div className="imgText__img img1">
-          <a href="/">레퍼런스 사이트</a>
-        </div>
-        <div className="imgText__img img2">
-          <a href="/" className="blue">
-            튜토리얼 사이트
-          </a>
-        </div>
+        {imgTxtText.map((info, index) => (
+          <ImgTxtInfo
+            key={info}
+            class={info.class}
+            site={info.site}
+            btnClass={info.btnClass}
+          />
+        ))}
+        ;
       </div>
     </section>
   );
